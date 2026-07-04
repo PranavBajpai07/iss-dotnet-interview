@@ -1,0 +1,98 @@
+{
+  "info": {
+    "name": "TodoApi",
+    "_postman_id": "12345-abcde-67890",
+    "description": "Collection for testing TodoApi endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Todos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5164/api/todos",
+          "protocol": "http",
+          "host": [ "localhost" ],
+          "port": "5164",
+          "path": [ "api", "todos" ]
+        }
+      }
+    },
+    {
+      "name": "Get Todo By Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5164/api/todos/1",
+          "protocol": "http",
+          "host": [ "localhost" ],
+          "port": "5164",
+          "path": [ "api", "todos", "1" ]
+        }
+      }
+    },
+    {
+      "name": "Create Todo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Test Todo\",\n  \"description\": \"Check API works\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5164/api/todos",
+          "protocol": "http",
+          "host": [ "localhost" ],
+          "port": "5164",
+          "path": [ "api", "todos" ]
+        }
+      }
+    },
+    {
+      "name": "Update Todo",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated Todo\",\n  \"description\": \"Updated description\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5164/api/todos/1",
+          "protocol": "http",
+          "host": [ "localhost" ],
+          "port": "5164",
+          "path": [ "api", "todos", "1" ]
+        }
+      }
+    },
+    {
+      "name": "Delete Todo",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5164/api/todos/1",
+          "protocol": "http",
+          "host": [ "localhost" ],
+          "port": "5164",
+          "path": [ "api", "todos", "1" ]
+        }
+      }
+    }
+  ]
+}

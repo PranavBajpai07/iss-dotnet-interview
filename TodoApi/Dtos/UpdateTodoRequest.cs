@@ -1,11 +1,9 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace TodoApi.Models;
+namespace TodoApi.Dtos;
 
-public sealed class Todo
+public sealed class UpdateTodoRequest
 {
-    public int Id { get; set; }
-
     [Required]
     [MaxLength(200)]
     public string Title { get; set; } = string.Empty;
@@ -14,6 +12,4 @@ public sealed class Todo
     public string? Description { get; set; }
 
     public bool IsCompleted { get; set; }
-
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 }
